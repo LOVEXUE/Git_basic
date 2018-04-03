@@ -37,6 +37,9 @@
     get reflog
       查看所有版本的操作记录
     #+END_EXAMPLE
+*** Git控制理念
+    git使用add选项首先将文件的修改内容存放至暂存区(index/stage)
     
+    然后再使用commit时将暂存区的所有内容提交至当前分支；
 * Test_reset
   
