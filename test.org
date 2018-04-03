@@ -17,8 +17,13 @@
      -m：添加提交说明；
      commit一次性可以提交多个文件，可以在add时添加多个不同的文件
    #+END_EXAMPLE 
-*** 检查文件状态
+*** 检查文件状态并提交修改
     #+BEGIN_EXAMPLE
     git status：查看当前仓库文件的状态
     git diff：查看文件上次提交后有拿些修改
+    然后可以执行git add 和 git commit 提交修改
+    #+END_EXAMPLE
+*** 版本回退和修改查询
+    #+BEGIN_EXAMPLE
+    git log：显示过去的提交日志
     #+END_EXAMPLE
