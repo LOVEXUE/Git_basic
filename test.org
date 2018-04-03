@@ -9,3 +9,16 @@
 ** TODO 于服务器搭建git环境，同步进行文件管理
 *** 启动业余任务，构建远程写作环境
 * Note
+*** 添加一个文件到git目录
+   #+BEGIN_EXAMPLE
+   git init：初始化一个仓库，在需要使用git进行版本控制的时候使用
+   git add "FileName"
+   git commit -m 
+     -m：添加提交说明；
+     commit一次性可以提交多个文件，可以在add时添加多个不同的文件
+   #+END_EXAMPLE 
+*** 检查文件状态
+    #+BEGIN_EXAMPLE
+    git status：查看当前仓库文件的状态
+    git diff：查看文件上次提交后有拿些修改
+    #+END_EXAMPLE
