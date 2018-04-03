@@ -1,13 +1,20 @@
 #+title:git工作流程
 * TODO GIT学习进度流程
-** TODO 初步建立Git版本控制系统 [0/1]
-*** TODO 前期建立工作
-    DEADLINE: <2018-04-08 周日>
+** DONE 初步建立Git版本控制系统 [1/1]
+   CLOSED: [2018-04-03 周二 17:04]
+   - State "DONE"       from "TODO"       [2018-04-03 周二 17:04]
+*** DONE 前期建立工作
+    CLOSED: [2018-04-03 周二 17:04] DEADLINE: <2018-04-08 周日>
+    - State "DONE"       from "TODO"       [2018-04-03 周二 17:04]
 **** git基础
      使用github进行前期测试，并完成git基本命令的学习；
 **** 于github上建立test文件夹，学习远程版本控制和分支管理
-** TODO 于服务器搭建git环境，同步进行文件管理
+** DONE 于服务器搭建git环境，同步进行文件管理
+   CLOSED: [2018-04-03 周二 17:04]
+   - State "DONE"       from "TODO"       [2018-04-03 周二 17:04]
 *** 启动业余任务，构建远程写作环境
+** TODO 学习分支操作，进行分支管理
+   DEADLINE: <2018-04-05 周四>
 * Note
 *** 添加一个文件到git目录
    #+BEGIN_EXAMPLE
@@ -53,6 +60,21 @@
       关联远程仓库
     git push -u origin master
       推送本地内容至远程仓库中
+    git clone git@server-name:path/repo-name.git /path/to/localfile
+      从远程仓库复制文件到本地
+    #+END_EXAMPLE
+*** 使用密钥文件进行远程连接
+    在要与远程服务器的连接上创建密钥对，然后将公钥文件内容复制至服务器相应帐号下: ~/.ssh/authorized_key
+    #+BEGIN_EXAMPLE
+    # 如果authorized_keys不存在，则创建它
+      touch ~/.ssh/authorized_keys
+    # 将上传的公钥添加到authorized_keys后面
+      cat ~/.ssh/id_rsa.pub_192.168.1.104 >> ~/.ssh/authorized_keys
+    # 修改authorized_keys权限
+      chmod 700 ~/.ssh
+      chmod 600 ~/.ssh/authorized_keys
+    # 查看authorized_keys最后一行
+      tail -1 ~/.ssh/authorized_keys   
     #+END_EXAMPLE
 
 * Test_reset
