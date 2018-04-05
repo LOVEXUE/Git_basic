@@ -77,6 +77,7 @@
     # 查看authorized_keys最后一行
       tail -1 ~/.ssh/authorized_keys   
     #+END_EXAMPLE
-
+*** 可以配置变量别名以更好的使用git
+    git config --global alias.aliasname  command_name
 * Test_reset
   git@118.24.23.137:/home/git/fiction.git
