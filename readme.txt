@@ -9,4 +9,4 @@ This is a test!
 
 Creat new branch dev!
 
-Creating a new brach is quick!
+Creating a new brach is quick and Sample!
