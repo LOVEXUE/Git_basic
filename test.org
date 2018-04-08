@@ -90,6 +90,8 @@
     $ git branch
   创建一个新的分支
     $ git branch BranchName
+  删除一个分支
+    $ git branch -d BranchName
   切换到某个分支
     $ git checkout BranchName
   创建并切换到某个分支
