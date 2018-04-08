@@ -96,6 +96,8 @@
     $ git checkout BranchName
   创建并切换到某个分支
     $ git checkout -b BranchName
+  合并某个分支到当前分支
+    git merge <name>
   #+END_EXAMPLE 
 * Test_reset
   git@118.24.23.137:/home/git/fiction.git
