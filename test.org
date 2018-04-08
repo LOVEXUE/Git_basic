@@ -67,6 +67,11 @@
 *** 使用密钥文件进行远程连接
     在要与远程服务器的连接上创建密钥对，然后将公钥文件内容复制至服务器相应帐号下: ~/.ssh/authorized_key
     #+BEGIN_EXAMPLE
+    建立远程仓库
+    $ sudo git init --bare sample.git
+    $ sudo chown -R git:git sample.git
+    记得要修改权限
+
     # 如果authorized_keys不存在，则创建它
       touch ~/.ssh/authorized_keys
     # 将上传的公钥添加到authorized_keys后面
