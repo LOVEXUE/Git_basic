@@ -84,5 +84,16 @@
     #+END_EXAMPLE
 *** 可以配置变量别名以更好的使用git
     git config --global alias.aliasname  command_name
+** 分支管理
+  #+BEGIN_EXAMPLE
+  查看当前分支
+    $ git branch
+  创建一个新的分支
+    $ git branch BranchName
+  切换到某个分支
+    $ git checkout BranchName
+  创建并切换到某个分支
+    $ git checkout -b BranchName
+  #+END_EXAMPLE 
 * Test_reset
   git@118.24.23.137:/home/git/fiction.git
