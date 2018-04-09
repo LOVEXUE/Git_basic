@@ -1,5 +1,7 @@
 #+title:git工作流程
-* TODO GIT学习进度流程
+* DONE GIT学习进度流程
+  CLOSED: [2018-04-09 一 16:05]
+  - State "DONE"       from "TODO"       [2018-04-09 一 16:05]
 ** DONE 初步建立Git版本控制系统 [1/1]
    CLOSED: [2018-04-03 周二 17:04]
    - State "DONE"       from "TODO"       [2018-04-03 周二 17:04]
@@ -13,8 +15,9 @@
    CLOSED: [2018-04-03 周二 17:04]
    - State "DONE"       from "TODO"       [2018-04-03 周二 17:04]
 *** 启动业余任务，构建远程写作环境
-** TODO 学习分支操作，进行分支管理
-   DEADLINE: <2018-04-05 周四>
+** DONE 学习分支操作，进行分支管理
+   CLOSED: [2018-04-09 周一 00:58] DEADLINE: <2018-04-05 周四>
+   - State "DONE"       from "TODO"       [2018-04-09 周一 00:58]
 * Note
 *** 添加一个文件到git目录
    #+BEGIN_EXAMPLE
@@ -63,10 +66,20 @@
       推送本地内容至远程仓库中
     git clone git@server-name:path/repo-name.git /path/to/localfile
       从远程仓库复制文件到本地
+    $ git fetch[remote]
+      拉取远程仓库的分支变动？
+    $ git pull <远程仓库名> <远程分支名>:<本地分支名>
+
+      更新本地仓库内容至远程版本
     #+END_EXAMPLE
 *** 使用密钥文件进行远程连接
     在要与远程服务器的连接上创建密钥对，然后将公钥文件内容复制至服务器相应帐号下: ~/.ssh/authorized_key
     #+BEGIN_EXAMPLE
+    建立远程仓库
+    $ sudo git init --bare sample.git
+    $ sudo chown -R git:git sample.git
+    记得要修改权限
+
     # 如果authorized_keys不存在，则创建它
       touch ~/.ssh/authorized_keys
     # 将上传的公钥添加到authorized_keys后面
@@ -79,5 +92,43 @@
     #+END_EXAMPLE
 *** 可以配置变量别名以更好的使用git
     git config --global alias.aliasname  command_name
+** 分支管理
+*** 分支冲突和解决
+    #+BEGIN_EXAMPLE
+    步骤：
+    1.切换到要合并到的分支，并进行合并操作，如果分支冲突，git会给出提示（相应的文件）
+    2.打开文件，文件中不同的部分会直接给出标示！
+    3.在要合并的分支下打开文件，进行修改并再次提交！
+
+    查看分支历史（带参数的log命令）
+      $ git log --graph --pretty=oneline --abbrev-commit
+    #+END_EXAMPLE
+*** 分支创建和切换
+   #+BEGIN_EXAMPLE
+   查看当前分支
+     $ git branch
+   创建一个新的分支
+     $ git branch BranchName
+   删除一个分支
+     $ git branch -d BranchName
+   切换到某个分支
+     $ git checkout BranchName
+   创建并切换到某个分支
+     $ git checkout -b BranchName
+   合并某个分支到当前分支
+     git merge <name>
+   #+END_EXAMPLE 
+*** 暂存工作内容
+    #+BEGIN_EXAMPLE
+    将当前工作现场“储藏”
+      $ git stash
+    查看被储藏的现场
+      $ git stash list
+    恢复工作现场
+      $ git stash apply（恢复的同时不删除stash内容）
+        $ git stash drop（删除stash内容）
+    
+      $ git stash pop （恢复的同时删除stash内容）
+    #+END_EXAMPLE
 * Test_reset
   git@118.24.23.137:/home/git/fiction.git
