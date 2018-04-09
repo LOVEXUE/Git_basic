@@ -64,6 +64,8 @@
       推送本地内容至远程仓库中
     git clone git@server-name:path/repo-name.git /path/to/localfile
       从远程仓库复制文件到本地
+    $ git fetch[remote]
+      下载远程仓库的所有变动
     #+END_EXAMPLE
 *** 使用密钥文件进行远程连接
     在要与远程服务器的连接上创建密钥对，然后将公钥文件内容复制至服务器相应帐号下: ~/.ssh/authorized_key
