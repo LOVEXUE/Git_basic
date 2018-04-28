@@ -1,5 +1,7 @@
 #+title:git工作流程
-* TODO GIT学习进度流程
+* DONE GIT学习进度流程
+  CLOSED: [2018-04-28 周六 09:09]
+  - State "DONE"       from "TODO"       [2018-04-28 周六 09:09]
 ** DONE 初步建立Git版本控制系统 [1/1]
    CLOSED: [2018-04-03 周二 17:04]
    - State "DONE"       from "TODO"       [2018-04-03 周二 17:04]
