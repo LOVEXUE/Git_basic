@@ -1,7 +1,7 @@
 #+title:git工作流程
 * DONE GIT学习进度流程
-  CLOSED: [2018-04-28 周六 09:09]
-  - State "DONE"       from "TODO"       [2018-04-28 周六 09:09]
+  CLOSED: [2018-04-09 一 16:05]
+  - State "DONE"       from "TODO"       [2018-04-09 一 16:05]
 ** DONE 初步建立Git版本控制系统 [1/1]
    CLOSED: [2018-04-03 周二 17:04]
    - State "DONE"       from "TODO"       [2018-04-03 周二 17:04]
@@ -66,6 +66,11 @@
       推送本地内容至远程仓库中
     git clone git@server-name:path/repo-name.git /path/to/localfile
       从远程仓库复制文件到本地
+    $ git fetch[remote]
+      拉取远程仓库的分支变动？
+    $ git pull <远程仓库名> <远程分支名>:<本地分支名>
+
+      更新本地仓库内容至远程版本
     #+END_EXAMPLE
 *** 使用密钥文件进行远程连接
     在要与远程服务器的连接上创建密钥对，然后将公钥文件内容复制至服务器相应帐号下: ~/.ssh/authorized_key
