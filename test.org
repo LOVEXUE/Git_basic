@@ -131,4 +131,3 @@
       $ git stash pop （恢复的同时删除stash内容）
     #+END_EXAMPLE
 * Test_reset
-  git@118.24.23.137:/home/git/fiction.git
