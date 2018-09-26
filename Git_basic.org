@@ -147,4 +147,36 @@
    git tag -a v0.1 -m "bulid lim-core"
    命令git tag -a <tagname> -m "some info..."可以指定标签信息
    #+END_EXAMPLE
-* Test_reset
+*** 忽略某些特定文件
+    在Git目录下创建一个特殊的文件，名为 *.gitignore* 的文件，其中填入与忽略的文件名，示例如下：
+    
+    忽略Python编译产生的.pyc、.pyo、dist等文件或目录
+    #+BEGIN_EXAMPLE
+    # 表示注释
+    # Python:
+    *.py[cod]
+    *.so
+    *.egg
+    *.egg-info
+    dist
+    build
+    #+END_EXAMPLE
+    完整的例子
+    #+BEGIN_EXAMPLE
+    # Windows:
+    Thumbs.db
+    ehthumbs.db
+    Desktop.ini
+    
+    # Python:
+    *.py[cod]
+    *.so
+    *.egg
+    *.egg-info
+    dist
+    build
+    
+    # My configurations:
+    db.ini
+    deploy_key_rsa
+    #+END_EXAMPLE
